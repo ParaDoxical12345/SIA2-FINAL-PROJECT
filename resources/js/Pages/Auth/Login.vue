@@ -33,15 +33,23 @@ const submit = () => {
     <Head title="Log in" />
 
     <AuthenticationCard>
-        <template #logo>
-            <AuthenticationCardLogo />
+        <template>
+            <div class="w-1/2 px-6 py-4 bg-blue-600 shadow-md">
+                <!-- Logo -->
+
+                <img src="../../Components/images/mdc-bg.jpg" alt="" class="">
+            </div>
+
+            <div class="w-1/2 px-6 py-4 bg-teal-700 shadow-md">
+                <!-- Login form -->
+            </div>
         </template>
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
+        <!-- <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
-        </div>
-
-        <form @submit.prevent="submit">
+        </div> -->
+        <div class="body">
+            <form @submit.prevent="submit">
             <div>
                 <InputLabel for="email" value="Email" />
                 <TextInput
@@ -86,5 +94,14 @@ const submit = () => {
                 </PrimaryButton>
             </div>
         </form>
+        </div>
+
     </AuthenticationCard>
 </template>
+<!--
+<style>
+ body{
+    display: flex;
+
+ }
+</style> -->
